@@ -1,0 +1,52 @@
+{
+  "name": "brakes",
+  "version": "3.1.0",
+  "description": "Node.js Circuit Breaker Pattern",
+  "main": "index.js",
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awolden/brakes.git"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "test:lint": "eslint .",
+    "coverage": "nyc --reporter lcov --reporter text npm test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls && rm -rf ./coverage"
+  },
+  "keywords": [
+    "circuit",
+    "breaker",
+    "circuit-breaker",
+    "circuitbreaker",
+    "hystrix"
+  ],
+  "greenkeeper": {
+    "ignore": [
+      "eslint",
+      "eslint-config-airbnb",
+      "eslint-plugin-import"
+    ]
+  },
+  "author": "Alex Wolden <awolden@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.38",
+    "@types/node": "^18.15.11",
+    "chai": "^4.0.1",
+    "chai-things": "^0.2.0",
+    "coveralls": "^3.0.3",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "mocha": "^3.5.2",
+    "nyc": "^11.2.1",
+    "sinon": "^7.2.7"
+  }
+}
